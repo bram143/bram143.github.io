@@ -89,7 +89,7 @@ function drawMenu() {
 	textSize(20);
 	strokeWeight(0);
 	fill(255);
-	text("DRUK OP SPATIE OM TE BEGINNEN", width/2, height/2 + 55);
+	text("DRUK OP SPATIE OF RAAK\nJE SCHERM AAN OM TE BEGINNEN", width/2, height/2 + 55);
 	stroke(0);
 	fill(218,165,32);
 	rect(0, height-15, width, 15);
@@ -117,6 +117,16 @@ function drawPipes() {
 	}
 }
 
+function mousePressed() {
+	if(bird.dead) {
+		restart();
+	} else if(menu) {
+		menu = false;
+	} else {
+		bird.jump();
+	}
+}
+
 function drawScore() {
 	if(!bird.dead) {
 		textSize(40);
@@ -141,6 +151,6 @@ function drawRestart() {
 
 		textSize(20);
 		textAlign(CENTER);
-		text("DRUK OP SPATIE OM TE BEGINNEN", width/2, height/2 + 100);
+		text("DRUK OP SPATIE OF RAAK\nJE SCHERM AAN OM TE BEGINNEN", width/2, height/2 + 55);
 	}
 }
