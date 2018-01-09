@@ -63,17 +63,14 @@ function restart() {
 }
 
 function keyPressed() {
+	if(bird.dead && key == ' ') {
+		restart();
+	}
 	if (key == ' ') {
 		bird.jump();
 	}
 	if(menu && key == ' ') {
 		menu = false;
-	}
-}
-
-function keyTyped() {
-	if(bird.dead && key == 'r') {
-		restart();
 	}
 }
 
@@ -84,15 +81,15 @@ function drawMenu() {
 	textStyle(BOLD);
 	textAlign(CENTER);
 	textSize(38);
-	text("FLAPPY", width/2 - 25, height/2 - 75);
+	text("FLAPPY", width/2 - 10, height/2 - 75);
 	textSize(30);
-	text("VLAAMSE", width/2 - 25, height/2 - 42);
+	text("VLAAMSE", width/2 - 10, height/2 - 42);
 	textSize(45);
-	text("G A A I", width/2 - 25, height/2 );
+	text("G A A I", width/2 - 10, height/2 );
 	textSize(20);
 	strokeWeight(0);
 	fill(255);
-	text("PRESS SPACE TO START", width/2 - 25, height/2 + 55);
+	text("DRUK OP SPATIE OM TE BEGINNEN", width/2, height/2 + 55);
 	stroke(0);
 	fill(218,165,32);
 	rect(0, height-15, width, 15);
@@ -142,7 +139,8 @@ function drawRestart() {
 		text('Score: ' + score, width/2 - 140, height/2);
 		text('High Score: ' + high_score, width/2 - 140, height/2 + 30);
 
-		textSize(25);
-		text('Press R to restart', width/2 - 140, height/2 + 75);
+		textSize(20);
+		textAlign(CENTER);
+		text("DRUK OP SPATIE OM TE BEGINNEN", width/2, height/2 + 100);
 	}
 }
