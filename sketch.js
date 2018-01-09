@@ -2,7 +2,7 @@ var bird;
 var pipes = [];
 
 var pipeSpawn = 3000;
-var score = 10;
+var score = 0;
 var high_score = 0;
 
 var previous_time;
@@ -121,11 +121,13 @@ function drawPipes() {
 }
 
 function drawScore() {
-	textSize(40);
-	fill(255);
-	strokeWeight(3);
-	stroke(0);
-	text(score, width - 50, 50);
+	if(!bird.dead) {
+		textSize(40);
+		fill(255);
+		strokeWeight(3);
+		stroke(0);
+		text(score, width - 50, 50);
+	}
 }
 
 function drawRestart() {
