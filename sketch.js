@@ -127,6 +127,16 @@ function mousePressed() {
 	}
 }
 
+function touchStarted() {
+	if(bird.dead) {
+		restart();
+	} else if(menu) {
+		menu = false;
+	} else {
+		bird.jump();
+	}
+  }
+
 function drawScore() {
 	if(!bird.dead) {
 		textSize(40);
@@ -151,6 +161,6 @@ function drawRestart() {
 
 		textSize(20);
 		textAlign(CENTER);
-		text("DRUK OP SPATIE OF RAAK\nJE SCHERM AAN OM TE BEGINNEN", width/2, height/2 + 55);
+		text("DRUK OP SPATIE OF RAAK\nJE SCHERM AAN OM TE BEGINNEN", width/2, height/2 + 70);
 	}
 }
