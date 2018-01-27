@@ -1,12 +1,14 @@
-function Block(x, y, size, color) {
+function Block(x, y, size, color, edge) {
     this.x = x;
     this.y = y;
     this.size = size;
+    this.edge = edge;
     this.color = color;
 
     this.render = function() {
         push();
-        strokeWeight(0);
+        strokeWeight(4);
+        stroke(this.edge);
         fill(this.color);
         rect(this.x*this.size, this.y*this.size, this.size, this.size);
         pop();
