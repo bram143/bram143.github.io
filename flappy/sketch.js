@@ -83,9 +83,9 @@ function drawMenu() {
 	textSize(38);
 	text("FLAPPY", width/2 - 10, height/2 - 75);
 	textSize(30);
-	text("VLAAMSE", width/2 - 10, height/2 - 42);
+	text("HOOFD", width/2 - 10, height/2 - 42);
 	textSize(45);
-	text("G A A I", width/2 - 10, height/2 );
+	text("LEIDER", width/2 - 10, height/2 );
 	textSize(20);
 	strokeWeight(0);
 	fill(255);
