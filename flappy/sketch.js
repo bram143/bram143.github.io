@@ -83,7 +83,7 @@ function drawMenu() {
 	textSize(38);
 	text("FLAPPY", width/2 - 10, height/2 - 75);
 	textSize(30);
-	text("HOOFD", width/2 - 10, height/2 - 10);
+	text("HOOFD", width/2 - 10, height/2 - 42);
 	textSize(45);
 	text("LEIDER", width/2 - 10, height/2 );
 	textSize(20);
